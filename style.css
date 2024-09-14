@@ -44,6 +44,7 @@ body::before{
         "hero"
         "rate"
         "testimonial";
+    max-width: 1110px;
 }
 .hero{
     grid-area: hero;
@@ -167,4 +168,65 @@ footer{
     color: var(--Very-Dark-Magenta);
     font-weight: 700;
     letter-spacing: 0.3px;
+}
+
+@media(min-width: 1440px){
+    body{
+        padding: 118px 24px 100px 24px;
+        background-position: bottom right;
+    }
+    .container{
+        grid-template-areas: 
+            "hero rate"
+            "testimonial testimonial";
+        column-gap: 125px;
+        row-gap: 71px;
+    }
+    .hero{
+        justify-self: left;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .hero--title{
+        margin: 0 0 16px 0;
+        min-height: 154px;
+        font-size: 56px;
+        line-height: 48px;
+        letter-spacing: -2px;
+    }
+    .hero--text{
+        padding: 0;
+    }
+    .rate{
+        justify-self: left;
+        gap: 16px;
+        padding-top: 27px;
+        width: 540px;
+    }
+    .rate--item{
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 20px 32px;
+        height: 56px;
+    }
+    .rate--item:nth-of-type(2){
+        align-self: center;
+    }
+    .rate--item:nth-of-type(3){
+        align-self: end;
+    }
+    .testimonial{
+        flex-direction: row;
+        align-items: start;
+        gap: 30px;
+        margin-top: 0;
+        height: 266px;
+    }
+    .card:nth-of-type(2){
+        align-self: center;
+    }
+    .card:nth-of-type(3){
+        align-self: end;
+    }
 }
